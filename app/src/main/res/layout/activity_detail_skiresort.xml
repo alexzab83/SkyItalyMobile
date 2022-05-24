@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="371dp"
+        android:layout_height="275dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:src="@mipmap/cervinia" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Località: Cervinia" />
+
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Provincia: Valle d'Aosta" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Altitudine: 2.009 m"
+        />
+
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Impianti sciistici: 64"
+         />
+
+    <TextView
+        android:id="@+id/title5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Km Piste: 350 (Matterhorn Ski Paradise(Italia/Svizzera)) "
+        />
+
+    <TextView
+        android:id="@+id/title6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Halfpipes: 1"
+        />
+
+    <TextView
+        android:id="@+id/title7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terrain Parks: 2"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title7"
+        android:layout_alignLeft="@+id/title7"
+        android:layout_marginLeft="230dp"
+        android:text="Previsioni Meteo"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#03A9F4"
+        android:textStyle="italic"
+        android:backgroundTint="@android:color/background_light"
+        />
+
+    <TextView
+        android:id="@+id/title8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="210dp"
+        android:background="@color/cardview_light_background"
+        android:text="Impianti e Piste Disponibili:"
+        android:textColor="#03A9F4"
+        />
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    
+
+</LinearLayout>
