@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">SkyItalyApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="action_sign_in_short">Registra</string>
+    <string name="email">Email</string>
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failed">Autenticazione fallita!!!</string>
+    <string name="change_email">Change Email</string>
+    <string name="change_password">Change Password</string>
+    <string name="send_password_reset_email">Send Password reset email</string>
+    <string name="remove_user">Remove user</string>
+    <string name="new_pass">New Password</string>
+    <string name="title_activity_profile">Firebase</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_link_to_register">Non hai un account? Registrati!</string>
+    <string name="btn_link_to_login">Sono già registrato. Vai al login</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="btn_forgot_password">Hai dimenticato la password?</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="hint_new_email">Nuova mail</string>
+    <string name="btn_change">Cambia</string>
+    <string name="btn_send">Invia</string>
+    <string name="btn_remove">Rimuovi</string>
+    <string name="btn_sign_out">Sign Out</string>
+    <string name="lbl_forgot_password">Forgot password?</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string name="hint_origin">Origine</string>
+    <string name="hint_dest">Destinazione</string>
+    <string name="title_reservation">Prenota</string>
+    <string name="str_data">Data partenza</string>
+    <string name="str_origin">Origine</string>
+    <string name="str_dest">Destinazione</string>
+    <string name="hint_date_departure">Data partenza</string>
+    <string name="title_main">Le tue prenotazioni</string>
+    <string name="lbl_departure">Partenza:</string>
+    <string name="lbl_arrivo">Arrivo</string>
+    <string name="lbl_hour_progr">Orario partenza</string>
+    <string name="loading">Caricamento in corso...</string>
+    <string name="txt_dialog_confirm_reservation">Vuoi prenotare questo viaggio?</string>
+    <string name="no_result">Nessun risultato</string>
+    <string name="no_reservation">Nessuna prenotazione attiva</string>
+    <string name="lbl_dateDeparture">Data Partenza</string>
+    <string name="lbl_search_solution">Cerca soluzioni</string>
+    <string name="error">Errore!</string>
+    <string name="email_required">Inserisci E-mail</string>
+    <string name="password_required">Inserisci E-mail</string>
+    <string name="password_length_required">La password deve essere di almeno 6 caratteri</string>
+    <string name="title_activity_sky_map_list">SkyMapListActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
