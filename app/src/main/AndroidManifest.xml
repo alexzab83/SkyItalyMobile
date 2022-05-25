@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkyItalyApp">
         <activity
-            android:name=".ui.SkyMapListActivity"
+            android:name=".ui.SkiMapListActivity"
             android:exported="false"
             android:label="@string/title_activity_sky_map_list"
             android:theme="@style/Theme.SkyItalyApp.NoActionBar" />

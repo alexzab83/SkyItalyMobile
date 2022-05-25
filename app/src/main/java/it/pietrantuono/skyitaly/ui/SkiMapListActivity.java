@@ -14,7 +14,7 @@ import androidx.navigation.ui.NavigationUI;
 import it.pietrantuono.skyitaly.R;
 import it.pietrantuono.skyitaly.databinding.ActivitySkymapBinding;
 
-public class SkyMapListActivity extends AppCompatActivity {
+public class SkiMapListActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivitySkymapBinding binding;
