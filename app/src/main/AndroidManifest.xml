@@ -10,12 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkyItalyApp">
         <activity
-            android:name=".ui.SkiMapListActivity"
-            android:exported="false"
-            android:label="@string/title_activity_sky_map_list"
-            android:theme="@style/Theme.SkyItalyApp.NoActionBar" />
+            android:name=".RecuperoPassword"
+            android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SkyItalyApp.NoActionBar">
