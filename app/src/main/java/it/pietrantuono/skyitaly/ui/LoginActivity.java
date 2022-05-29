@@ -1,5 +1,6 @@
 package it.pietrantuono.skyitaly.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class LoginActivity extends BaseActivity {
         {
             @Override
             public void onClick(View v){
+                Intent intent = new Intent(v.getContext(),RecuperoPassword.class);
                 txtemail=binding.email.getText().toString();       //leggere ciò che è stato scritto nel campo email
                 txtPassword=binding.password.getText().toString();
                 if(checkField(txtemail,txtPassword) && checkEmail(txtemail) && checkPassword(txtPassword))

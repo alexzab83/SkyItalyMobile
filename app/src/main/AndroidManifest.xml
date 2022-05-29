@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkyItalyApp">
         <activity
-            android:name=".RecuperoPassword"
+            android:name=".ui.RecuperoPassword"
             android:exported="false" />
         <activity
             android:name=".ui.LoginActivity"
