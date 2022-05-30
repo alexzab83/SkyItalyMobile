@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -37,7 +39,7 @@
             android:id="@+id/tv_latitudine_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="0.24 "
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -66,7 +68,7 @@
                 android:id="@+id/tv_longitudine_val"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:text="0.10"
                 android:textAlignment="textEnd"
                 android:textSize="20sp"
@@ -95,7 +97,7 @@
             android:id="@+id/tv_altezza_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="2002"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -124,7 +126,7 @@
             android:id="@+id/tv_weather_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="forte nevicata"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -154,7 +156,7 @@
             android:id="@+id/tv_temperatura_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="-5°"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -184,7 +186,7 @@
             android:id="@+id/tv_temperaturaPer_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="-7°"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -214,7 +216,7 @@
             android:id="@+id/tv_umidita_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="40%"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -243,7 +245,7 @@
             android:id="@+id/tv_velocitavento_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="45"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -272,7 +274,7 @@
             android:id="@+id/tv_direzionevento_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="W"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -301,7 +303,7 @@
             android:id="@+id/tv_coperturaNuvolosa_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="75%"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -330,7 +332,7 @@
             android:id="@+id/tv_puntorugiada_val"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:text="9.08"
             android:textAlignment="textEnd"
             android:textSize="20sp"
@@ -340,5 +342,4 @@
 
 </LinearLayout>
 
-
-
+</layout>
