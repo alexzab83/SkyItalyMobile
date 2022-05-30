@@ -10,7 +10,7 @@
         android:layout_height="275dp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
-        android:src="@mipmap/cervinia" />
+        android:src="@drawable/cervinia" />
 
     <TextView
         android:id="@+id/title"
