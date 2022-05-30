@@ -14,12 +14,13 @@ public class Weather {
     private double dewpoint_c;
 
 
+
     // METODI GET
-    public double getLatitudine() {
+    public double getLat() {
         return lat;
     }
 
-    public double getLongitudine() {
+    public double getLon() {
         return lon;
     }
 
@@ -59,12 +60,13 @@ public class Weather {
         return dewpoint_c;
     }
 
+
     // METODI SET
-    public void setLatitudine(double lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public void setLongitudine(double lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
