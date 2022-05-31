@@ -13,6 +13,10 @@
             android:name=".ui.RecuperoPassword"
             android:exported="false" />
         <activity
+            android:name=".ui.SkiMapListActivity"
+            android:exported="false"
+            />
+        <activity
             android:name=".ui.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"

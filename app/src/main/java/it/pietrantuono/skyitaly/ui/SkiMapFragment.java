@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import it.pietrantuono.skyitaly.databinding.FragmentSkymapBinding;
 
-public class SkiMapFragment extends Fragment {
+public class SkiMapFragment extends BaseFragment {
 
     private FragmentSkymapBinding binding;
 

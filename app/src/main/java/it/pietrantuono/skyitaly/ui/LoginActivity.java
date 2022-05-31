@@ -24,44 +24,43 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());   // accesso a tute le risorse grafiche inserite nel activity log_in xml
-        View view= binding.getRoot();
+        View view = binding.getRoot();
         setContentView(view);     //
 
-         //leggere ciò che è stato scritto nel campo password
-        binding.btnLogin.setOnClickListener(new View.OnClickListener()
-        {
+        //leggere ciò che è stato scritto nel campo password
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent intent = new Intent(v.getContext(),RecuperoPassword.class);
-                txtemail=binding.email.getText().toString();       //leggere ciò che è stato scritto nel campo email
-                txtPassword=binding.password.getText().toString();
-                if(checkField(txtemail,txtPassword) && checkEmail(txtemail) && checkPassword(txtPassword))
-                    Toast.makeText(v.getContext(),"CampiPieni",Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(v.getContext(),"CampiErrati",Toast.LENGTH_LONG).show();
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), RecuperoPassword.class);
+                txtemail = binding.email.getText().toString();       //leggere ciò che è stato scritto nel campo email
+                txtPassword = binding.password.getText().toString();
+                if (checkField(txtemail, txtPassword) && checkEmail(txtemail) && checkPassword(txtPassword)) {
+                    startActivity(new Intent(v.getContext(), SkiMapListActivity.class));
+                    finish();
+                } else
+                    Toast.makeText(v.getContext(), "CampiErrati", Toast.LENGTH_LONG).show();
 
             }
         });
     }
-    private boolean checkField(String username,String password) {     // da implementare(controllo due campi email e password)
+
+    private boolean checkField(String username, String password) {     // da implementare(controllo due campi email e password)
         return !(username.isEmpty() || password.isEmpty());
 
     }
 
     public boolean checkEmail(String email) {
-        String regex ="^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";         // ^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
+        String regex = "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";         // ^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
         Boolean result = matcher.matches();
-                return result;
+        return result;
     }
 
-    public boolean checkPassword(String password){
-        if(password.length()<6 ) return false;
+    public boolean checkPassword(String password) {
+        if (password.length() < 6) return false;
         return true;
     }
-
-
 
 
 }
