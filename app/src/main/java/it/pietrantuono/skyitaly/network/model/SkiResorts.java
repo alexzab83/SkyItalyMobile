@@ -4,11 +4,12 @@ import java.util.List;
 
 public class SkiResorts {
 
+    // inserire il campo immagine(proprio di ogni ski_location) //
     private int id;
     private String city;
     private String province;
     private String altitude;
-    private int countResorts;
+    private int countLifts;
     private int kmTrack;
     private int halfPipes;
     private int terrainParks;
@@ -50,12 +51,12 @@ public class SkiResorts {
         this.altitude = altitude;
     }
 
-    public int getCountResorts() {
-        return countResorts;
+    public int getCountLifts() {
+        return countLifts;
     }
 
-    public void setCountResorts(int countResorts) {
-        this.countResorts = countResorts;
+    public void setCountLifts(int countResorts) {
+        this.countLifts = countLifts;
     }
 
     public int getKmTrack() {
