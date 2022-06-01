@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
@@ -8,8 +8,8 @@
             type="it.pietrantuono.skyitaly.network.model.SkiResorts" />
     </data>
 
-     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+     <LinearLayout
+         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -32,7 +32,8 @@
             android:id="@+id/title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Località" />
+            android:text="Località"
+            android:textStyle="bold" />
 
          <TextView
              android:id="@+id/title1din"
@@ -56,7 +57,8 @@
                  android:id="@+id/title2"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Provincia" />
+                 android:text="Provincia"
+                 android:textStyle="bold" />
 
              <TextView
                  android:id="@+id/title2din"
@@ -78,7 +80,8 @@
                  android:id="@+id/title3"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Altitudine " />
+                 android:text="Altitudine"
+                 android:textStyle="bold" />
 
              <TextView
                  android:id="@+id/title3din"
@@ -101,7 +104,8 @@
                  android:id="@+id/title4"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Numero Impianti sciistici " />
+                 android:text="Numero Impianti sciistici"
+                 android:textStyle="bold" />
 
              <TextView
                  android:id="@+id/title4din"
@@ -123,7 +127,8 @@
                  android:id="@+id/title5"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Km piste Totali " />
+                 android:text="Km piste Totali"
+                 android:textStyle="bold" />
 
              <TextView
                  android:id="@+id/title5din"
@@ -145,7 +150,8 @@
                  android:id="@+id/title6"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Halfpipes: " />
+                 android:text="Halfpipes"
+                 android:textStyle="bold" />
 
              <TextView
                  android:id="@+id/title6din"
@@ -168,7 +174,8 @@
                  android:id="@+id/title7"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Terrainparks " />
+                 android:text="Terrainparks"
+                 android:textStyle="bold" />
 
              <TextView
                  android:id="@+id/title7din"
