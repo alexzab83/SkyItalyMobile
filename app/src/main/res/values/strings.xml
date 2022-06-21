@@ -44,22 +44,16 @@
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
     <string name="hint_origin">Origine</string>
-    <string name="hint_dest">Destinazione</string>
-    <string name="title_reservation">Prenota</string>
-    <string name="str_data">Data partenza</string>
-    <string name="str_origin">Origine</string>
-    <string name="str_dest">Destinazione</string>
-    <string name="hint_date_departure">Data partenza</string>
-    <string name="title_main">Le tue prenotazioni</string>
-    <string name="lbl_departure">Partenza:</string>
-    <string name="lbl_arrivo">Arrivo</string>
-    <string name="lbl_hour_progr">Orario partenza</string>
+
+
+
+
+
+
+
+
     <string name="loading">Caricamento in corso...</string>
-    <string name="txt_dialog_confirm_reservation">Vuoi prenotare questo viaggio?</string>
-    <string name="no_result">Nessun risultato</string>
-    <string name="no_reservation">Nessuna prenotazione attiva</string>
-    <string name="lbl_dateDeparture">Data Partenza</string>
-    <string name="lbl_search_solution">Cerca soluzioni</string>
+    
     <string name="error">Errore!</string>
     <string name="email_required">Inserisci E-mail</string>
     <string name="password_required">Inserisci E-mail</string>
