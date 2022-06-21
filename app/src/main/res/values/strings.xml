@@ -10,6 +10,9 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="hint_vecchiapassword">OLD PASSWORD</string>
+    <string name="hint_nuova_password">NEW PASSWORD</string>
+
 
 
     <string name="action_sign_in_short">Registra</string>
