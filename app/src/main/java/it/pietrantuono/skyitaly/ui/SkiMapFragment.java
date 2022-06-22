@@ -14,6 +14,11 @@ import it.pietrantuono.skyitaly.databinding.FragmentSkymapBinding;
 public class SkiMapFragment extends BaseFragment {
 
     private FragmentSkymapBinding binding;
+    private String type;
+
+    public SkiMapFragment(String type){
+        this.type = type;
+    }
 
     @Override
     public View onCreateView(

@@ -12,12 +12,16 @@ import java.util.regex.Pattern;
 
 import it.pietrantuono.skyitaly.R;
 import it.pietrantuono.skyitaly.databinding.ActivityLoginBinding;
+import it.pietrantuono.skyitaly.network.model.User;
+import it.pietrantuono.skyitaly.ui.callbacks.ILoginCallback;
+import it.pietrantuono.skyitaly.ui.viewmodel.SkiResortViewModel;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity implements ILoginCallback {
 
     private ActivityLoginBinding binding;
     private String txtemail;
     private String txtPassword;
+    private SkiResortViewModel viewModel;
 
 
     @Override
@@ -26,20 +30,29 @@ public class LoginActivity extends BaseActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());   // accesso a tute le risorse grafiche inserite nel activity log_in xml
         View view = binding.getRoot();
         setContentView(view);     //
-
+        viewModel = new SkiResortViewModel(this);
         //leggere ciò che è stato scritto nel campo password
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), RecuperoPassword.class);
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext(), RecuperoPassword.class);
                 txtemail = binding.email.getText().toString();       //leggere ciò che è stato scritto nel campo email
                 txtPassword = binding.password.getText().toString();
                 if (checkField(txtemail, txtPassword) && checkEmail(txtemail) && checkPassword(txtPassword)) {
-                    startActivity(new Intent(v.getContext(), SkiMapListActivity.class));
-                    finish();
+                    viewModel.login(binding.email.getText().toString(), binding.password.getText().toString(), LoginActivity.this);
                 } else
                     Toast.makeText(v.getContext(), "CampiErrati", Toast.LENGTH_LONG).show();
 
+
+
+            }
+        });
+
+        binding.btnResetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), RecuperoPassword.class));
             }
         });
     }
@@ -62,6 +75,16 @@ public class LoginActivity extends BaseActivity {
         return true;
     }
 
+
+    @Override
+    public void loginSuccess(User u) {
+
+    }
+
+    @Override
+    public void loginFail() {
+
+    }
 
 }
 

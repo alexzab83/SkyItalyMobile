@@ -20,9 +20,9 @@ public class SkyResortPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         if (position == 1){
-            return new SkiMapFragment();
+            return new SkiMapFragment("all");
         }
-        return new SkiMapFragment();
+        return new SkiMapFragment("prefer");
     }
 
     @Override

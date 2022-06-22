@@ -19,6 +19,17 @@ public class SkiResorts {
 
     }
 
+    public SkiResorts(String city, String province, String altitude, int countResorts, int kmTrack, int halfPipes, int terrainParks, List<Plant> listPlant) {
+        this.city = city;
+        this.province = province;
+        this.altitude = altitude;
+       // this.countResorts = countResorts;
+        this.kmTrack = kmTrack;
+        this.halfPipes = halfPipes;
+        this.terrainParks = terrainParks;
+        this.listPlant = listPlant;
+    }
+
     public int getId() {
         return id;
     }
