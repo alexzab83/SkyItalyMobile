@@ -53,7 +53,7 @@
 
 
     <string name="loading">Caricamento in corso...</string>
-    
+
     <string name="error">Errore!</string>
     <string name="email_required">Inserisci E-mail</string>
     <string name="password_required">Inserisci E-mail</string>
