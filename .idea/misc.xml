@@ -14,9 +14,9 @@
         <entry key="..\:/Users/alessandro.guerrazzi/AndroidStudioProjects/SkyItalyApp/app/src/main/res/layout/fragment_skymap.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.163" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.163" />
-        <entry key="app/src/main/res/layout/activity_cambio_password.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_cambio_password.xml" value="0.11" />
         <entry key="app/src/main/res/layout/activity_detail_skiresort.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20885416666666667" />
         <entry key="app/src/main/res/layout/activity_previsioni_meteo.xml" value="0.21739130434782608" />
         <entry key="app/src/main/res/layout/activity_recupero_password.xml" value="0.221875" />

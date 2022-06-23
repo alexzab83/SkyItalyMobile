@@ -7,7 +7,7 @@ public class SkiResorts {
     // inserire il campo immagine(proprio di ogni ski_location) //
     private int id;
     private String city;
-    private String province;
+    private String regione;
     private String altitude;
     private int countLifts;
     private int kmTrack;
@@ -21,7 +21,7 @@ public class SkiResorts {
 
     public SkiResorts(String city, String province, String altitude, int countResorts, int kmTrack, int halfPipes, int terrainParks, List<Plant> listPlant) {
         this.city = city;
-        this.province = province;
+        this.regione = province;
         this.altitude = altitude;
        // this.countResorts = countResorts;
         this.kmTrack = kmTrack;
@@ -47,11 +47,11 @@ public class SkiResorts {
     }
 
     public String getProvince() {
-        return province;
+        return regione;
     }
 
     public void setProvince(String province) {
-        this.province = province;
+        this.regione = province;
     }
 
     public String getAltitude() {
