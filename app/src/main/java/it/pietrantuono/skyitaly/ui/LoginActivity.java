@@ -15,6 +15,7 @@ import it.pietrantuono.skyitaly.databinding.ActivityLoginBinding;
 import it.pietrantuono.skyitaly.network.model.User;
 import it.pietrantuono.skyitaly.ui.callbacks.ILoginCallback;
 import it.pietrantuono.skyitaly.ui.viewmodel.SkiResortViewModel;
+import it.pietrantuono.skyitaly.utils.PreferencesUtils;
 
 public class LoginActivity extends BaseActivity implements ILoginCallback {
 
@@ -78,7 +79,8 @@ public class LoginActivity extends BaseActivity implements ILoginCallback {
 
     @Override
     public void loginSuccess(User u) {
-
+        PreferencesUtils.putUser(this, u);
+        startActivity(new Intent(this, SkiMapListActivity.class));
     }
 
     @Override

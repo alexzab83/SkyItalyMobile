@@ -35,6 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:hint="@string/hint_email"
+                    android:text="carlo@gmail.com"
                     android:inputType="textEmailAddress"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/white" />
@@ -50,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:hint="@string/hint_password"
+                    android:text="ciaociao"
                     android:inputType="textPassword"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/white" />
@@ -68,16 +70,6 @@
 
             <!-- Link to Login Screen -->
 
-            <Button
-                android:id="@+id/btn_signup"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dip"
-                android:background="@null"
-                android:text="@string/btn_link_to_register"
-                android:textAllCaps="false"
-                android:textColor="@color/celeste"
-                android:textSize="15sp" />
             <Button
                 android:id="@+id/btn_reset_password"
                 android:layout_width="fill_parent"

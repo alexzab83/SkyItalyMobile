@@ -5,7 +5,10 @@ import android.content.Context;
 import androidx.lifecycle.ViewModel;
 
 import it.pietrantuono.skyitaly.network.SkiResortCaller;
+import it.pietrantuono.skyitaly.network.UserCaller;
+import it.pietrantuono.skyitaly.ui.callbacks.IListPlantCallback;
 import it.pietrantuono.skyitaly.ui.callbacks.ILoginCallback;
+import it.pietrantuono.skyitaly.ui.callbacks.ISkiResortCallback;
 
 public class SkiResortViewModel extends ViewModel {
 
@@ -16,17 +19,27 @@ public class SkiResortViewModel extends ViewModel {
     }
 
     public void login(String email, String password, ILoginCallback callback){
-        SkiResortCaller skiResortCaller = new SkiResortCaller(context , callback);
-        skiResortCaller.login(email, password);
+        UserCaller userCaller = new UserCaller(context , callback);
+        userCaller.login(email, password);
     }
 
     public void changePassword(String email, String oldPassword, String newPassword,  ILoginCallback callback){
-        SkiResortCaller skiResortCaller = new SkiResortCaller(context , callback);
-        skiResortCaller.changePassword(email, oldPassword, newPassword);
+        UserCaller userCaller = new UserCaller(context , callback);
+        userCaller.changePassword(email, oldPassword, newPassword);
     }
 
     public void recoveryPassword(String email, ILoginCallback callback){
-        SkiResortCaller skiResortCaller = new SkiResortCaller(context , callback);
-        skiResortCaller.recoveryPassword(email);
+        UserCaller userCaller = new UserCaller(context , callback);
+        userCaller.recoveryPassword(email);
+    }
+
+    public void getSkiResort(ISkiResortCallback callback, int type){
+        SkiResortCaller caller = new SkiResortCaller(context, callback);
+        caller.getSkiResorts(1, type);
+    }
+
+    public void getPlantList(IListPlantCallback callback, int idSkiMap){
+        SkiResortCaller caller = new SkiResortCaller(context, callback);
+        caller.getListPlants(idSkiMap);
     }
 }

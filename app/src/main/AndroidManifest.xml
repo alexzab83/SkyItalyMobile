@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ski_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ski_icon"
         android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.SkyItalyApp">
@@ -31,8 +31,12 @@
         </activity>
 
         <activity
-            android:name=".ui.CambioPassword"
-    />
+            android:name=".ui.CambioPassword" />
+        <activity
+            android:name=".ui.SkiResortDetail" />
+
+        <activity
+            android:name=".ui.PlantActivity" />
 
 
 

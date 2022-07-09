@@ -3,9 +3,6 @@ package it.pietrantuono.skyitaly.ui;
 import android.os.Bundle;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -15,15 +12,21 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.List;
+
 import it.pietrantuono.skyitaly.R;
 import it.pietrantuono.skyitaly.databinding.ActivitySkymapBinding;
-import it.pietrantuono.skyitaly.ui.adapter.SkyResortPagerAdapter;
+import it.pietrantuono.skyitaly.network.model.SkiResort;
+import it.pietrantuono.skyitaly.ui.adapter.SkiResortPagerAdapter;
+import it.pietrantuono.skyitaly.ui.callbacks.ISkiResortCallback;
+import it.pietrantuono.skyitaly.ui.viewmodel.SkiResortViewModel;
 
-public class SkiMapListActivity extends BaseActivity {
+public class SkiMapListActivity extends BaseActivity implements ISkiResortCallback {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivitySkymapBinding binding;
-    private SkyResortPagerAdapter adapter;
+    private SkiResortPagerAdapter adapter;
+    private SkiResortViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +34,11 @@ public class SkiMapListActivity extends BaseActivity {
 
         binding = ActivitySkymapBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        viewModel = new SkiResortViewModel(this);
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Tutti"));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Preferiti"));
         FragmentManager fragmentManager = getSupportFragmentManager();
-        adapter = new SkyResortPagerAdapter(fragmentManager , getLifecycle());
+        adapter = new SkiResortPagerAdapter(fragmentManager , getLifecycle());
         binding.viewPager2.setAdapter(adapter);
         binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -59,7 +63,7 @@ public class SkiMapListActivity extends BaseActivity {
                 binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position));
             }
         });
-
+     //   viewModel.getSkiResort(this);
     }
 
     @Override
@@ -67,5 +71,10 @@ public class SkiMapListActivity extends BaseActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_sky_map_list);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public List<SkiResort> getSkiResorts(List<SkiResort> skiResortList) {
+        return null;
     }
 }

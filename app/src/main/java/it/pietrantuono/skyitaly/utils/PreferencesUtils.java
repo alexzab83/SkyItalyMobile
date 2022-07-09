@@ -3,6 +3,8 @@ package it.pietrantuono.skyitaly.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.google.gson.Gson;
+
 import it.pietrantuono.skyitaly.network.model.User;
 
 public class PreferencesUtils {
@@ -18,4 +20,16 @@ public class PreferencesUtils {
         user.setEmail(preferences.getString(PREF_EMAIL, ""));
         return user;
     }
+
+    public static void putUser(Context c, User u){
+        SharedPreferences preferences = getPref(c);
+        preferences.edit().putString("user_skiresort", new Gson().toJson(u)).commit();
+    }
+
+    public static void deleteUser(Context c, User u){
+        SharedPreferences preferences = getPref(c);
+        preferences.edit().remove("user_skiresort");
+    }
+
+
 }

@@ -8,21 +8,18 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import it.pietrantuono.skyitaly.ui.SkiMapFragment;
 
-public class SkyResortPagerAdapter extends FragmentStateAdapter {
+public class SkiResortPagerAdapter extends FragmentStateAdapter {
 
 
 
-    public SkyResortPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+    public SkiResortPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
 
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        if (position == 1){
-            return new SkiMapFragment("all");
-        }
-        return new SkiMapFragment("prefer");
+        return new SkiMapFragment(position);
     }
 
     @Override
