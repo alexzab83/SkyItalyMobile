@@ -51,6 +51,12 @@ public class SkiMapFragment extends BaseFragment implements ISkiResortCallback, 
         adapter.setSkiResortList(skiResortList);
         binding.skiResortRecycle.setAdapter(adapter);
         binding.skiResortRecycle.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         viewModel.getSkiResort(this, type);
         adapter.setActionInterface(this);
     }

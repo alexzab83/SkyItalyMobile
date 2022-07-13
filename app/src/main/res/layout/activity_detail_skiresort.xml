@@ -5,7 +5,7 @@
 
         <variable
             name="skiresort"
-            type="it.pietrantuono.skyitaly.network.model.SkiResorts" />
+            type="it.pietrantuono.skyitaly.network.model.SkiResort" />
     </data>
 
      <LinearLayout
@@ -13,6 +13,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <CheckBox
+            android:id="@+id/cb_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Preferito"/>
 
 
         <ImageView

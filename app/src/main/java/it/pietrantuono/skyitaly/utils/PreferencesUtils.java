@@ -16,8 +16,9 @@ public class PreferencesUtils {
     }
     public static User getUser(Context c){
         SharedPreferences preferences = getPref(c);
-        User user = new User();
-        user.setEmail(preferences.getString(PREF_EMAIL, ""));
+        String json = preferences.getString("user_skiresort", "");
+        if (json.equals("")) return null;
+        User user = new Gson().fromJson(json, User.class);
         return user;
     }
 

@@ -33,6 +33,11 @@ public class LoginActivity extends BaseActivity implements ILoginCallback {
         setContentView(view);     //
         viewModel = new SkiResortViewModel(this);
         //leggere ciò che è stato scritto nel campo password
+        User loggedUser = PreferencesUtils.getUser(this);
+        if (loggedUser != null) {
+            startActivity(new Intent(this, SkiMapListActivity.class));
+            return;
+        }
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

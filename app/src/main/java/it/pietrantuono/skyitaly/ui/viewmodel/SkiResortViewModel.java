@@ -9,6 +9,7 @@ import it.pietrantuono.skyitaly.network.UserCaller;
 import it.pietrantuono.skyitaly.ui.callbacks.IListPlantCallback;
 import it.pietrantuono.skyitaly.ui.callbacks.ILoginCallback;
 import it.pietrantuono.skyitaly.ui.callbacks.ISkiResortCallback;
+import it.pietrantuono.skyitaly.utils.PreferencesUtils;
 
 public class SkiResortViewModel extends ViewModel {
 
@@ -35,11 +36,16 @@ public class SkiResortViewModel extends ViewModel {
 
     public void getSkiResort(ISkiResortCallback callback, int type){
         SkiResortCaller caller = new SkiResortCaller(context, callback);
-        caller.getSkiResorts(1, type);
+        caller.getSkiResorts(PreferencesUtils.getUser(context).getId(), type);
     }
 
     public void getPlantList(IListPlantCallback callback, int idSkiMap){
         SkiResortCaller caller = new SkiResortCaller(context, callback);
         caller.getListPlants(idSkiMap);
+    }
+
+    public void addRemoveFavorite( int userId, int idSkiMap, boolean addRemove){
+        SkiResortCaller caller = new SkiResortCaller(context);
+        caller.addRemoveFavorite(userId, idSkiMap, addRemove);
     }
 }

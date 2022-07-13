@@ -36,6 +36,10 @@ public class SkiResortCaller {
         this.plantCallback = callback;
     }
 
+    public SkiResortCaller(Context context) {
+        this.context = context;
+    }
+
     public void getSkiResorts(int userId, int type){
         RequestQueue queue = Volley.newRequestQueue(context);
         String url = BASE_URL+"/skiResortList?userId="+userId+"&"+"favorite="+type;
@@ -84,11 +88,9 @@ public class SkiResortCaller {
     }
 
 
-    public void addRemoveFavorite(int userId, int skiMapId){
+    public void addRemoveFavorite(int userId, int skiMapId, boolean addRemove){
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url = BASE_URL+"/addRemoveFavourite?userId="+userId+"&"+"skiMapId="+skiMapId;
-
-// Request a string response from the provided URL.
+        String url = BASE_URL+"/addRemoveFavourite?userId="+userId+"&"+"skiMapId="+skiMapId+"&addOrRemove="+addRemove;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override

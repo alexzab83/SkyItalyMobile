@@ -1,18 +1,36 @@
 package it.pietrantuono.skyitaly.ui.adapter;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 
+import androidx.databinding.DataBindingUtil;
+
+import java.util.List;
+
+import it.pietrantuono.skyitaly.R;
+import it.pietrantuono.skyitaly.databinding.ItemPlantSlopeBinding;
+import it.pietrantuono.skyitaly.network.model.Plant;
+
 public class PlantExpandableAdapter extends BaseExpandableListAdapter {
+
+    private List<Plant> listPlant;
+    private ItemPlantSlopeBinding binding;
+    private ItemPlantSlopeBinding binding2;
+
+    public PlantExpandableAdapter(List<Plant> listPlant) {
+        this.listPlant = listPlant;
+    }
+
     @Override
     public int getGroupCount() {
-        return 0;
+        return listPlant.size();
     }
 
     @Override
     public int getChildrenCount(int i) {
-        return 0;
+        return listPlant.get(i).getListSkiSlope().size();
     }
 
     @Override
@@ -42,12 +60,30 @@ public class PlantExpandableAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-        return null;
+        if (view == null){
+            binding = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.item_plant_slope, viewGroup, false);
+            view = binding.getRoot();
+        }else {
+            binding = (ItemPlantSlopeBinding) view.getTag();
+        }
+
+        binding.setName(listPlant.get(i).getName());
+        view.setTag(binding);
+        return view;
     }
 
     @Override
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-        return null;
+        if (view == null){
+            binding2 = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.item_plant_slope, viewGroup, false);
+            view = binding2.getRoot();
+        }else {
+            binding = (ItemPlantSlopeBinding) view.getTag();
+        }
+
+        binding2.setName(listPlant.get(i).getListSkiSlope().get(i1).getName());
+        view.setTag(binding2);
+        return view;
     }
 
     @Override
