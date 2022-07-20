@@ -191,28 +191,26 @@
          </LinearLayout>
 
 
+         <Button
+             android:id="@+id/button1"
+             android:layout_width="wrap_content"
+             android:layout_height="53dp"
+             android:layout_below="@id/img_skiresort"
+             android:layout_alignLeft="@id/img_skiresort"
+             android:layout_marginLeft="240dp"
+             android:backgroundTint="@android:color/background_light"
+             android:text="Previsioni Meteo"
+             android:textAlignment="gravity"
+             android:textAllCaps="true"
+             android:textColor="#03A9F4"
+             android:textStyle="italic" />
 
-
-          <Button
-              android:id="@+id/button1"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_below="@+id/title7"
-              android:layout_alignLeft="@+id/title7"
-              android:layout_marginLeft="230dp"
-              android:backgroundTint="@android:color/background_light"
-              android:text="Previsioni Meteo"
-              android:textAlignment="center"
-              android:textAllCaps="true"
-              android:textColor="#03A9F4"
-              android:textStyle="italic" />
-
-          <Button
+         <Button
               android:id="@+id/btn_plant_list"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_marginRight="210dp"
-              android:background="@color/cardview_light_background"
+              android:backgroundTint="@android:color/background_light"
               android:text="Impianti e Piste Disponibili:"
               android:textColor="#03A9F4" />
 
