@@ -28,7 +28,7 @@ public class UserCaller {
     private Context context;
     private ILoginCallback callback;
 
-    private static final String BASE_URL = "http://192.168.1.158:8080/SimpleWSApp/rest/skiresort";
+    private static final String BASE_URL = "http://192.168.1.107:8080/SimpleWSApp/rest/skiresort";
 
     public UserCaller(Context context, ILoginCallback callback) {
         this.context = context;

@@ -23,7 +23,7 @@ public class SkiResortCaller {
     private Context context;
     private ISkiResortCallback callback;
     private IListPlantCallback plantCallback;
-    private static final String BASE_URL = "http://192.168.1.158:8080/SimpleWSApp/rest/skiresort";
+    private static final String BASE_URL = "http://192.168.1.107:8080/SimpleWSApp/rest/skiresort";
 
 
     public SkiResortCaller(Context context, ISkiResortCallback callback) {
