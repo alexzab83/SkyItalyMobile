@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:hint="@string/hint_email"
-                    android:text="carlo@gmail.com"
+                    android:text="a.guerrazzi.esterno@almaviva.it"
                     android:inputType="textEmailAddress"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/white" />

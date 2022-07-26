@@ -36,12 +36,9 @@ public class SkiMapFragment extends BaseFragment implements ISkiResortCallback, 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-
+            Bundle savedInstanceState) {
         binding = FragmentSkymapBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

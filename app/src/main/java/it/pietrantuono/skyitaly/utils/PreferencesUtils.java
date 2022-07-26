@@ -27,9 +27,9 @@ public class PreferencesUtils {
         preferences.edit().putString("user_skiresort", new Gson().toJson(u)).commit();
     }
 
-    public static void deleteUser(Context c, User u){
+    public static void deleteUser(Context c){
         SharedPreferences preferences = getPref(c);
-        preferences.edit().remove("user_skiresort");
+        preferences.edit().remove("user_skiresort").commit();
     }
 
 

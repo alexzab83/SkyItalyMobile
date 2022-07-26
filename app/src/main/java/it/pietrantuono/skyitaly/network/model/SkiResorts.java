@@ -13,6 +13,7 @@ public class SkiResorts {
     private int kmTrack;
     private int halfPipes;
     private int terrainParks;
+    private Previsioni previsioni;
     private List<Plant> listPlant;
 
     public SkiResorts(){
@@ -100,5 +101,13 @@ public class SkiResorts {
 
     public void setListPlant(List<Plant> listPlant) {
         this.listPlant = listPlant;
+    }
+
+    public Previsioni getPrevisioni() {
+        return previsioni;
+    }
+
+    public void setPrevisioni(Previsioni previsioni) {
+        this.previsioni = previsioni;
     }
 }

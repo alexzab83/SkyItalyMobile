@@ -67,4 +67,9 @@
     <string name="no_result">Nessun Risultato</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="chiudi">Chiudi</string>
+    <string name="descrizione">Descrizione</string>
+    <string name="neve_village">Neve village</string>
+    <string name="neve_top_mountain">Neve top mountain</string>
+    <string name="codice_bollettino">Codice bollettino</string>
 </resources>

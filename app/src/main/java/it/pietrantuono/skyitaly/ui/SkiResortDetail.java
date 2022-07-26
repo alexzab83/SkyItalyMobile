@@ -1,14 +1,21 @@
 package it.pietrantuono.skyitaly.ui;
 
+import android.app.ActionBar;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
+
+import androidx.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import it.pietrantuono.skyitaly.databinding.ActivityDetailSkiresortBinding;
+import it.pietrantuono.skyitaly.databinding.ActivityPrevisioniMeteoBinding;
 import it.pietrantuono.skyitaly.databinding.ActivitySkymapBinding;
 import it.pietrantuono.skyitaly.network.SkiResortCaller;
 import it.pietrantuono.skyitaly.network.model.SkiResort;
@@ -26,11 +33,12 @@ public class SkiResortDetail extends BaseActivity{
         super.onCreate(savedInstanceState);
 
        binding = ActivityDetailSkiresortBinding.inflate(getLayoutInflater());
-       getDataIntent();
        viewModel = new SkiResortViewModel(this);
+       getDataIntent();
        setTitle(skiResort.getLocation());
        binding.setSkiresort(skiResort);
        setContentView(binding.getRoot());
+
        Picasso.get().load(skiResort.getUrl().trim()).into(binding.imgSkiresort);
        binding.btnPlantList.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +57,31 @@ public class SkiResortDetail extends BaseActivity{
                caller.addRemoveFavorite(PreferencesUtils.getUser(SkiResortDetail.this).getId(), skiResort.getIdSkiMap(), b);
            }
        });
+       binding.btnPrevisioni.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+              showDialog();
+
+           }
+       });
        binding.cbFavorite.setChecked(skiResort.isFavorite());
     }
+
+    public void showDialog() {
+        Dialog dialog = new Dialog(this);
+        ActivityPrevisioniMeteoBinding binding = ActivityPrevisioniMeteoBinding.inflate(LayoutInflater.from(this));
+        binding.setWeather(skiResort.getPrevisioni());
+        binding.setLocation(skiResort.getLocation());
+        dialog.setContentView(binding.getRoot());
+        binding.btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
 
     private void getDataIntent(){
         Bundle b = getIntent().getExtras();

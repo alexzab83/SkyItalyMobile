@@ -13,6 +13,7 @@ public class SkiResort {
     private String halfPipe;
     private String terraInParks;
     private boolean favorite;
+    private Previsioni previsioni;
 
     public int getIdSkiMap() {
         return idSkiMap;
@@ -92,5 +93,13 @@ public class SkiResort {
 
     public void setFavorite(boolean favorite) {
         this.favorite = favorite;
+    }
+
+    public Previsioni getPrevisioni() {
+        return previsioni;
+    }
+
+    public void setPrevisioni(Previsioni previsioni) {
+        this.previsioni = previsioni;
     }
 }

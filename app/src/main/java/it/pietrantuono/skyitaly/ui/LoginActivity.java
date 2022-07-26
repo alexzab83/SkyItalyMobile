@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -36,6 +37,7 @@ public class LoginActivity extends BaseActivity implements ILoginCallback {
         User loggedUser = PreferencesUtils.getUser(this);
         if (loggedUser != null) {
             startActivity(new Intent(this, SkiMapListActivity.class));
+            finish();
             return;
         }
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -49,9 +51,6 @@ public class LoginActivity extends BaseActivity implements ILoginCallback {
                     viewModel.login(binding.email.getText().toString(), binding.password.getText().toString(), LoginActivity.this);
                 } else
                     Toast.makeText(v.getContext(), "CampiErrati", Toast.LENGTH_LONG).show();
-
-
-
             }
         });
 
@@ -86,11 +85,12 @@ public class LoginActivity extends BaseActivity implements ILoginCallback {
     public void loginSuccess(User u) {
         PreferencesUtils.putUser(this, u);
         startActivity(new Intent(this, SkiMapListActivity.class));
+        finish();
     }
 
     @Override
     public void loginFail() {
-
+        Toast.makeText(this, "Credenziali Errate", Toast.LENGTH_LONG).show();
     }
 
 }

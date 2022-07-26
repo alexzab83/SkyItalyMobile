@@ -25,7 +25,9 @@ public class PlantActivity extends BaseActivity implements IListPlantCallback {
         binding = ActivityPlantBinding.inflate(getLayoutInflater());   // accesso a tute le risorse grafiche inserite nel activity log_in xml
         View view = binding.getRoot();
         setContentView(view);
+        setActionBar();
         setTitle("Impianti e piste");
+
         viewModel = new SkiResortViewModel(this);
         viewModel.getPlantList(this, getIntent().getExtras().getInt("idSkiMap"));
     }
@@ -36,4 +38,11 @@ public class PlantActivity extends BaseActivity implements IListPlantCallback {
         binding.expandableListView.setAdapter(adapter);
         Log.e("Plant", ""+list.size());
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
+    }
+
 }

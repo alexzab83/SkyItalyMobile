@@ -1,8 +1,15 @@
 package it.pietrantuono.skyitaly.ui;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -20,13 +27,15 @@ import it.pietrantuono.skyitaly.network.model.SkiResort;
 import it.pietrantuono.skyitaly.ui.adapter.SkiResortPagerAdapter;
 import it.pietrantuono.skyitaly.ui.callbacks.ISkiResortCallback;
 import it.pietrantuono.skyitaly.ui.viewmodel.SkiResortViewModel;
+import it.pietrantuono.skyitaly.utils.PreferencesUtils;
 
-public class SkiMapListActivity extends BaseActivity implements ISkiResortCallback {
+public class SkiMapListActivity extends BaseActivity  {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivitySkymapBinding binding;
     private SkiResortPagerAdapter adapter;
     private SkiResortViewModel viewModel;
+    private AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +46,7 @@ public class SkiMapListActivity extends BaseActivity implements ISkiResortCallba
         viewModel = new SkiResortViewModel(this);
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Tutti"));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Preferiti"));
+        setActionBar();
         FragmentManager fragmentManager = getSupportFragmentManager();
         adapter = new SkiResortPagerAdapter(fragmentManager , getLifecycle());
         binding.viewPager2.setAdapter(adapter);
@@ -74,7 +84,45 @@ public class SkiMapListActivity extends BaseActivity implements ISkiResortCallba
     }
 
     @Override
-    public List<SkiResort> getSkiResorts(List<SkiResort> skiResortList) {
-        return null;
+    public boolean onCreateOptionsMenu( Menu menu ) {
+        getMenuInflater().inflate(R.menu.skiresort_actionbar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:
+                builder = new AlertDialog.Builder(this);
+                builder.setMessage("Vuoi effettuare il logout?");
+                builder.setMessage("Do you want to close this application ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                PreferencesUtils.deleteUser(SkiMapListActivity.this);
+                                finish();
+                                startActivity(new Intent(SkiMapListActivity.this, LoginActivity.class));
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                //  Action for 'NO' Button
+                                dialog.cancel();
+
+                            }
+                        });
+                //Creating dialog box
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.setTitle("Logout");
+                alert.show();
+                break;
+            case R.id.change:
+                startActivity(new Intent(this, CambioPassword.class));
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
