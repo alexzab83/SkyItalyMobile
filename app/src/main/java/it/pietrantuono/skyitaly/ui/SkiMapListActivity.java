@@ -94,8 +94,7 @@ public class SkiMapListActivity extends BaseActivity  {
         switch (item.getItemId()){
             case R.id.logout:
                 builder = new AlertDialog.Builder(this);
-                builder.setMessage("Vuoi effettuare il logout?");
-                builder.setMessage("Do you want to close this application ?")
+                builder.setMessage("Vuoi effettuare il logout?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
